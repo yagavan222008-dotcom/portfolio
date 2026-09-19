@@ -1,828 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Yagavan T M | AI & Data Science Student</title>
 
     <meta name="description"
-          content="Yagavan T M - AI & Data Science Student">
+          content="Yagavan T M - Artificial Intelligence and Data Science student portfolio.">
 
-    <title>Yagavan T M | AI & Data Science</title>
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 
 <body>
 
+    <!-- ================= SIDEBAR ================= -->
 
-<!-- =====================================================
-                    NAVBAR
-===================================================== -->
+    <aside class="sidebar">
 
-<header class="navbar">
-
-    <div class="nav-container">
-
-        <!-- LOGO -->
-
-        <a href="#home" class="logo">
+        <div class="logo">
             YAGAVAN<span>.</span>
-        </a>
+        </div>
 
+        <nav class="side-nav">
 
-        <!-- NAVIGATION -->
-
-        <nav class="nav-links">
-
-            <a href="#home" class="active">
-                Home
+            <a href="#home" class="nav-link active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
             </a>
 
-            <a href="#about">
-                About
+            <a href="#about" class="nav-link">
+                <i class="fa-solid fa-user"></i>
+                <span>About</span>
             </a>
 
-            <a href="#skills">
-                Skills
+            <a href="#skills" class="nav-link">
+                <i class="fa-solid fa-code"></i>
+                <span>Skills</span>
             </a>
 
-            <a href="#projects">
-                Projects
+            <a href="#projects" class="nav-link">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Projects</span>
             </a>
 
-            <a href="#education">
-                Education
+            <a href="#education" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Education</span>
             </a>
 
-            <a href="#contact">
-                Contact
+            <a href="#contact" class="nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
             </a>
 
         </nav>
 
+        <div class="sidebar-bottom">
 
-        <!-- RIGHT SIDE -->
+            <a href="https://github.com/yagavan222008-dotcom"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-icon"
+               aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
 
-        <div class="nav-right">
-
-            <a href="resume.pdf" target="_blank" class="resume-btn">
-    ↓ &nbsp; Resume
-</a>
-
-
-            <a
-                href="https://github.com/yagavan222008-dotcom"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="github-icon"
-                aria-label="GitHub"
-            >
-                <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                >
-                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.91.57.1.78-.25.78-.55v-2.13c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.03 0 0 .96-.31 3.15 1.17A10.9 10.9 0 0 1 12 6.04c.97 0 1.94.13 2.85.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.74.11 3.03.74.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-                </svg>
+            <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-icon"
+               aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
         </div>
 
-
-        <!-- MOBILE MENU -->
-
-        <button
-            class="menu-button"
-            onclick="toggleMenu()"
-            aria-label="Menu"
-        >
-            ☰
-        </button>
-
-    </div>
-
-</header>
+    </aside>
 
 
+    <!-- ================= MAIN CONTENT ================= -->
 
-<!-- =====================================================
-                    HERO
-===================================================== -->
-
-<main>
-
-<section id="home" class="hero">
-
-    <!-- LEFT -->
-
-    <div class="hero-left">
-
-        <div class="hello">
-            HELLO, I'M
-        </div>
+    <main class="main-content">
 
 
-        <h1>
-            Yagavan
-            <span>T M</span>
-        </h1>
+        <!-- ================= HOME ================= -->
 
+        <section id="home" class="hero section">
 
-        <h2>
-            AI & Data Science Student
-        </h2>
+            <div class="hero-content">
 
+                <p class="hero-small">
+                    HELLO, I'M
+                </p>
 
-        <p class="hero-text">
+                <h1>
+                    Yagavan <span>T M</span>
+                </h1>
 
-            I build practical software solutions using
-            Python, AI/ML, backend technologies and
-            data-driven systems.
+                <h2>
+                    Artificial Intelligence &amp; Data Science Student
+                </h2>
 
-        </p>
+                <p class="hero-description">
+                    I'm a second-year AI &amp; Data Science student passionate
+                    about Artificial Intelligence, Data Science, Python,
+                    SQL and building practical technology solutions.
+                </p>
 
+                <div class="hero-buttons">
 
-        <!-- BUTTONS -->
+                    <a href="#projects" class="btn primary-btn">
+                        View Projects
+                    </a>
 
-        <div class="hero-buttons">
+                    <a href="https://github.com/yagavan222008-dotcom"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn secondary-btn">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
 
-            <a
-                href="#projects"
-                class="btn primary"
-            >
-                <span>→</span>
-                View My Projects
-            </a>
+                    <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn secondary-btn">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
 
+                </div>
 
-            <a
-                href="https://github.com/yagavan222008-dotcom"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn outline"
-            >
-                <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                >
-                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.91.57.1.78-.25.78-.55v-2.13c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.03 0 0 .96-.31 3.15 1.17A10.9 10.9 0 0 1 12 6.04c.97 0 1.94.13 2.85.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.74.11 3.03.74.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-                </svg>
-
-                GitHub
-            </a>
-
-
-            <a
-                href="https://www.linkedin.com/in/yagavan-t-m-4a354037"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn outline"
-            >
-
-                <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                >
-                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.47v6.27ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.56V9H3.56v11.45ZM22.22 0H1.78C.8 0 0 .8 0 1.78v20.44C0 23.2.8 24 1.78 24h20.44c.98 0 1.78-.8 1.78-1.78V1.78C24 .8 23.2 0 22.22 0Z"/>
-                </svg>
-
-                LinkedIn
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- RIGHT TERMINAL -->
-
-    <div class="hero-right">
-
-        <div class="glow"></div>
-
-        <div class="terminal">
-
-            <div class="terminal-header">
-
-                <div class="circle red"></div>
-                <div class="circle yellow"></div>
-                <div class="circle green"></div>
+                <a href="./resume.pdf"
+                   target="_blank"
+                   class="resume-link">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    View My Resume
+                </a>
 
             </div>
 
 
-            <div class="terminal-code">
+            <!-- CODE WINDOW -->
+
+            <div class="code-window">
+
+                <div class="window-top">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <pre><code>
+<span class="code-purple">class</span> <span class="code-blue">Yagavan</span>:
+
+    role = <span class="code-green">"AI & Data Science Student"</span>
+
+    skills = [
+        <span class="code-green">"Python"</span>,
+        <span class="code-green">"SQL"</span>,
+        <span class="code-green">"Machine Learning"</span>,
+        <span class="code-green">"Data Science"</span>
+    ]
+
+    goal = <span class="code-green">"AI Engineer"</span>
+                </code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <div class="section-heading">
+                <p>01</p>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm <strong>Yagavan T M</strong>, a second-year
+                        Artificial Intelligence and Data Science student at
+                        <strong>KPR Institute of Engineering and Technology</strong>.
+                    </p>
+
+                    <p>
+                        I have experience with programming fundamentals,
+                        Python, SQL and data science concepts. I enjoy
+                        developing projects that combine software,
+                        data and artificial intelligence.
+                    </p>
+
+                    <p>
+                        My current goal is to continuously improve my
+                        technical skills and build real-world projects
+                        that demonstrate my ability to solve problems
+                        using technology.
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <div class="about-item">
+                        <span>Education</span>
+                        <strong>B.Tech / B.E. AI &amp; DS</strong>
+                    </div>
+
+                    <div class="about-item">
+                        <span>Year</span>
+                        <strong>2nd Year</strong>
+                    </div>
+
+                    <div class="about-item">
+                        <span>Focus</span>
+                        <strong>AI &amp; Data Science</strong>
+                    </div>
+
+                    <div class="about-item">
+                        <span>Goal</span>
+                        <strong>AI Engineer</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section">
+
+            <div class="section-heading">
+                <p>02</p>
+                <h2>Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Programming &amp; Data Science</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Database &amp; Querying</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Data Science</h3>
+                    <p>Analysis &amp; Visualization</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Artificial Intelligence</h3>
+                    <p>AI &amp; Machine Learning</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fa-solid fa-table"></i>
+                    <h3>Pandas &amp; NumPy</h3>
+                    <p>Data Processing</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>C Programming</h3>
+                    <p>Programming Fundamentals</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="section-heading">
+                <p>03</p>
+                <h2>Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <h3>AI &amp; Data Science Projects</h3>
+
+                    <p>
+                        A collection of projects focused on Python,
+                        data analysis, machine learning and artificial
+                        intelligence.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>Data Science</span>
+                    </div>
+
+                    <a href="https://github.com/yagavan222008-dotcom"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View on GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        A responsive personal portfolio website built
+                        using HTML, CSS and JavaScript and deployed
+                        using GitHub Pages.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a href="https://github.com/yagavan222008-dotcom/portfolio"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Repository
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EDUCATION ================= -->
+
+        <section id="education" class="section">
+
+            <div class="section-heading">
+                <p>04</p>
+                <h2>Education</h2>
+            </div>
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
 
                 <div>
-                    <span class="keyword">const</span>
-                    <span class="white"> developer </span>
-                    <span class="operator">=</span>
-                    <span class="white"> {</span>
-                </div>
 
-
-                <div class="indent">
-
-                    <span class="property">
-                        name:
+                    <span class="education-year">
+                        2025 — Present
                     </span>
 
-                    <span class="string">
-                        "Yagavan"
-                    </span>,
+                    <h3>
+                        Artificial Intelligence &amp; Data Science
+                    </h3>
 
-                </div>
+                    <h4>
+                        KPR Institute of Engineering and Technology
+                    </h4>
 
-
-                <div class="indent">
-
-                    <span class="property">
-                        role:
-                    </span>
-
-                    <span class="string">
-                        "AI Engineer"
-                    </span>,
-
-                </div>
-
-
-                <div class="indent">
-
-                    <span class="property">
-                        skills:
-                    </span>
-
-                    <span class="white">
-                        [
-                    </span>
-
-                </div>
-
-
-                <div class="indent2">
-
-                    <span class="string">
-                        "Python"
-                    </span>,
-
-                    <span class="string">
-                        "SQL"
-                    </span>,
-
-                </div>
-
-
-                <div class="indent2">
-
-                    <span class="string">
-                        "AI/ML"
-                    </span>,
-
-                    <span class="string">
-                        "Backend"
-                    </span>
-
-                </div>
-
-
-                <div class="indent">
-
-                    <span class="white">
-                        ]
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <span class="white">
-                        };
-                    </span>
+                    <p>
+                        Currently pursuing my second year with a focus
+                        on programming, artificial intelligence,
+                        data science and problem solving.
+                    </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
+        <!-- ================= CONTACT ================= -->
 
-<!-- =====================================================
-                    ABOUT
-===================================================== -->
+        <section id="contact" class="section contact-section">
 
-<section id="about" class="section">
+            <div class="section-heading">
+                <p>05</p>
+                <h2>Let's Connect</h2>
+            </div>
 
-    <div class="section-heading">
+            <div class="contact-content">
 
-        <span>
-            01
-        </span>
+                <p>
+                    I'm always interested in learning, building projects
+                    and connecting with people in technology.
+                </p>
 
-        <div></div>
+                <div class="contact-buttons">
 
-        <h2>
-            About Me
-        </h2>
+                    <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-btn">
 
-    </div>
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
 
-
-    <div class="about-grid">
-
-        <div>
-
-            <h3>
-                Building technology
-                with curiosity and purpose.
-            </h3>
-
-        </div>
+                    </a>
 
 
-        <div class="about-text">
+                    <a href="https://github.com/yagavan222008-dotcom"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-btn">
 
-            <p>
-                I'm Yagavan T M, a second-year
-                Artificial Intelligence and Data Science
-                student at KPR Institute of Engineering
-                and Technology.
-            </p>
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
 
-            <p>
-                I'm interested in Artificial Intelligence,
-                Machine Learning, Data Science and
-                Backend Development.
-            </p>
-
-            <p>
-                I enjoy turning ideas into practical
-                applications that solve real-world
-                problems.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+                    </a>
 
 
+                    <a href="./resume.pdf"
+                       target="_blank"
+                       class="contact-btn">
 
-<!-- =====================================================
-                    SKILLS
-===================================================== -->
+                        <i class="fa-solid fa-file-pdf"></i>
+                        Resume
 
-<section id="skills" class="section dark">
+                    </a>
 
-    <div class="section-heading">
-
-        <span>
-            02
-        </span>
-
-        <div></div>
-
-        <h2>
-            Technical Skills
-        </h2>
-
-    </div>
-
-
-    <div class="skills-grid">
-
-
-        <div class="skill-box">
-
-            <h3>
-                Programming
-            </h3>
-
-            <div class="tags">
-
-                <span>Python</span>
-                <span>C</span>
-                <span>TypeScript</span>
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="skill-box">
+        <!-- ================= FOOTER ================= -->
 
-            <h3>
-                Data & Database
-            </h3>
-
-            <div class="tags">
-
-                <span>SQL</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
-
-            </div>
-
-        </div>
-
-
-        <div class="skill-box">
-
-            <h3>
-                AI & Machine Learning
-            </h3>
-
-            <div class="tags">
-
-                <span>Machine Learning</span>
-                <span>AI Agents</span>
-                <span>Generative AI</span>
-
-            </div>
-
-        </div>
-
-
-        <div class="skill-box">
-
-            <h3>
-                Tools
-            </h3>
-
-            <div class="tags">
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Streamlit</span>
-                <span>VS Code</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-                    PROJECTS
-===================================================== -->
-
-<section id="projects" class="section">
-
-    <div class="section-heading">
-
-        <span>
-            03
-        </span>
-
-        <div></div>
-
-        <h2>
-            Featured Projects
-        </h2>
-
-    </div>
-
-
-    <div class="projects-grid">
-
-
-        <!-- NEXUS -->
-
-        <article class="project-card featured">
-
-            <span class="project-number">
-                01
-            </span>
-
-            <p class="project-category">
-                FEATURED PROJECT
-            </p>
-
-            <h3>
-                NEXUS
-            </h3>
+        <footer>
 
             <p>
-
-                AI-powered campus intelligence system
-                designed to provide intelligent solutions
-                for students and college management.
-
+                © 2026 Yagavan T M. Built with HTML, CSS &amp; JavaScript.
             </p>
 
-            <div class="project-tags">
+        </footer>
 
-                <span>Python</span>
-                <span>AI/ML</span>
-                <span>Backend</span>
-                <span>Database</span>
+    </main>
 
-            </div>
 
-            <a href="#" class="project-link">
-                View Project →
-            </a>
+    <!-- JavaScript -->
 
-        </article>
-
-
-
-        <!-- AI AGENT -->
-
-        <article class="project-card">
-
-            <span class="project-number">
-                02
-            </span>
-
-            <p class="project-category">
-                ARTIFICIAL INTELLIGENCE
-            </p>
-
-            <h3>
-                AI Agent Accountability
-            </h3>
-
-            <p>
-
-                Exploring accountability and transparency
-                in AI agent systems.
-
-            </p>
-
-            <div class="project-tags">
-
-                <span>TypeScript</span>
-                <span>AI</span>
-                <span>Agents</span>
-
-            </div>
-
-            <a
-                href="https://github.com/yagavan222008-dotcom/AI-Agent_Accountability-"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                GitHub →
-            </a>
-
-        </article>
-
-
-
-        <!-- SEARCH -->
-
-        <article class="project-card">
-
-            <span class="project-number">
-                03
-            </span>
-
-            <p class="project-category">
-                DATA STRUCTURES & ALGORITHMS
-            </p>
-
-            <h3>
-                Search Algorithms
-            </h3>
-
-            <p>
-
-                Implementation of Breadth First Search
-                and Depth First Search algorithms.
-
-            </p>
-
-            <div class="project-tags">
-
-                <span>Python</span>
-                <span>BFS</span>
-                <span>DFS</span>
-
-            </div>
-
-            <a
-                href="https://github.com/yagavan222008-dotcom/search_algorithm-"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                GitHub →
-            </a>
-
-        </article>
-
-
-
-        <!-- INVOICE -->
-
-        <article class="project-card">
-
-            <span class="project-number">
-                04
-            </span>
-
-            <p class="project-category">
-                SOFTWARE DEVELOPMENT
-            </p>
-
-            <h3>
-                AI Invoice Management
-            </h3>
-
-            <p>
-
-                Business-focused billing and invoice
-                management application designed to
-                simplify daily operations.
-
-            </p>
-
-            <div class="project-tags">
-
-                <span>AI</span>
-                <span>Web App</span>
-                <span>Database</span>
-
-            </div>
-
-            <a href="#" class="project-link">
-                View Project →
-            </a>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-                    EDUCATION
-===================================================== -->
-
-<section id="education" class="section dark">
-
-    <div class="section-heading">
-
-        <span>
-            04
-        </span>
-
-        <div></div>
-
-        <h2>
-            Education
-        </h2>
-
-    </div>
-
-
-    <div class="education-card">
-
-        <div class="education-date">
-            2025 — Present
-        </div>
-
-
-        <div>
-
-            <h3>
-                Artificial Intelligence &
-                Data Science
-            </h3>
-
-            <p>
-                KPR Institute of Engineering
-                and Technology
-            </p>
-
-            <small>
-                Undergraduate Student
-            </small>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-                    CONTACT
-===================================================== -->
-
-<section id="contact" class="contact">
-
-    <p class="contact-label">
-        HAVE A PROJECT IN MIND?
-    </p>
-
-    <h2>
-        Let's build something useful.
-    </h2>
-
-    <p>
-        I'm always interested in learning,
-        building and exploring new technology.
-    </p>
-
-
-    <div class="contact-buttons">
-
-        <a
-            href="mailto:yagavan222008@gmail.com"
-            class="btn primary"
-        >
-            Email Me
-        </a>
-
-
-        <a
-            href="https://www.linkedin.com/in/yagavan-t-m-4a354037"
-            target="_blank"
-            class="btn outline"
-        >
-            LinkedIn
-        </a>
-
-
-        <a
-            href="https://github.com/yagavan222008-dotcom"
-            target="_blank"
-            class="btn outline"
-        >
-            GitHub
-        </a>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-                    FOOTER
-===================================================== -->
-
-<footer>
-
-    <span>
-        © 2026 Yagavan T M
-    </span>
-
-    <span>
-        Built with HTML, CSS & JavaScript.
-    </span>
-
-</footer>
-
-
-
-<script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
-
 </html>
