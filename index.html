@@ -4,235 +4,338 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Yagavan T M | AI & Data Science Student</title>
+    <title>Yagavan T M | AI & Data Science Student | Developer Portfolio</title>
 
-    <meta name="description"
-          content="Yagavan T M - Artificial Intelligence and Data Science student portfolio.">
+    <meta name="description" content="Portfolio of Yagavan T M - Second-year Artificial Intelligence & Data Science student at KPR Institute of Engineering and Technology. Passionate about building intelligent applications, backend systems and practical technology solutions.">
+    <meta name="author" content="Yagavan T M">
+    <meta name="keywords" content="Yagavan, Yagavan T M, AI, Data Science, KPRIET, Portfolio, Machine Learning, Python, FastAPI, Developer, Student">
 
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yagavan T M | AI & Data Science Student">
+    <meta property="og:description" content="Second-year Artificial Intelligence & Data Science student at KPR Institute of Engineering and Technology. Building intelligent applications and backend systems.">
+    <meta property="og:image" content="./yagavans portfolio.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css">
-
-    <!-- Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- ================= SIDEBAR ================= -->
+    <!-- ================= MOBILE HEADER ================= -->
+    <header class="mobile-header">
+        <a href="#home" class="mobile-logo">
+            YAGAVAN<span class="accent-dot">.</span>
+        </a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
 
-    <aside class="sidebar">
+    <!-- Sidebar Backdrop for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
 
-        <div class="logo">
-            YAGAVAN<span>.</span>
+    <!-- ================= FIXED LEFT SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+            <a href="#home" class="sidebar-logo">
+                <span class="logo-text">YAGAVAN<span class="accent-dot">.</span></span>
+                <span class="logo-sub">AI &amp; DATA SCIENCE</span>
+            </a>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>
 
-        <nav class="side-nav">
-
-            <a href="#home" class="nav-link active">
+        <nav class="side-nav" id="sideNav" aria-label="Main navigation">
+            <a href="#home" class="nav-link active" data-section="home">
                 <i class="fa-solid fa-house"></i>
                 <span>Home</span>
             </a>
 
-            <a href="#about" class="nav-link">
+            <a href="#about" class="nav-link" data-section="about">
                 <i class="fa-solid fa-user"></i>
                 <span>About</span>
             </a>
 
-            <a href="#skills" class="nav-link">
+            <a href="#skills" class="nav-link" data-section="skills">
                 <i class="fa-solid fa-code"></i>
                 <span>Skills</span>
             </a>
 
-            <a href="#projects" class="nav-link">
+            <a href="#projects" class="nav-link" data-section="projects">
                 <i class="fa-solid fa-laptop-code"></i>
                 <span>Projects</span>
             </a>
 
-            <a href="#education" class="nav-link">
+            <a href="#education" class="nav-link" data-section="education">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <span>Education</span>
             </a>
 
-            <a href="#contact" class="nav-link">
+            <a href="#contact" class="nav-link" data-section="contact">
                 <i class="fa-solid fa-envelope"></i>
                 <span>Contact</span>
             </a>
-
         </nav>
 
         <div class="sidebar-bottom">
+            <div class="status-indicator-box">
+                <span class="status-pulse"></span>
+                <span class="status-label">Open to Opportunities</span>
+            </div>
 
-            <a href="https://github.com/yagavan222008-dotcom"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="social-icon"
-               aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+            <div class="sidebar-socials">
+                <a href="https://github.com/yagavan222008-dotcom"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sidebar-social-link"
+                   aria-label="GitHub Profile">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
-            <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="social-icon"
-               aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
+                <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sidebar-social-link"
+                   aria-label="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
 
+                <a href="mailto:yagavan222008@gmail.com"
+                   class="sidebar-social-link"
+                   aria-label="Email Yagavan">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
         </div>
 
     </aside>
 
 
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- ================= MAIN CONTENT WRAPPER ================= -->
+    <main class="main-content" id="mainContent">
 
-    <main class="main-content">
+        <!-- ================= HERO SECTION ================= -->
+        <section id="home" class="hero-section section">
 
+            <div class="hero-container">
 
-        <!-- ================= HOME ================= -->
+                <div class="hero-text-block">
 
-        <section id="home" class="hero section">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>HELLO, I'M</span>
+                    </div>
 
-            <div class="hero-content">
+                    <h1 class="hero-title">
+                        Yagavan <span class="gradient-text">T M</span>
+                    </h1>
 
-                <p class="hero-small">
-                    HELLO, I'M
-                </p>
+                    <h2 class="hero-role">
+                        AI &amp; Data Science Student
+                    </h2>
 
-                <h1>
-                    Yagavan <span>T M</span>
-                </h1>
+                    <p class="hero-college">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Second-year Artificial Intelligence and Data Science student at <strong>KPR Institute of Engineering and Technology</strong>.
+                    </p>
 
-                <h2>
-                    Artificial Intelligence &amp; Data Science Student
-                </h2>
+                    <p class="hero-intro">
+                        I'm an Artificial Intelligence and Data Science student passionate about building intelligent applications, backend systems and practical technology solutions. I enjoy working with Python, SQL, AI/ML and modern web technologies.
+                    </p>
 
-                <p class="hero-description">
-                    I'm a second-year AI &amp; Data Science student passionate
-                    about Artificial Intelligence, Data Science, Python,
-                    SQL and building practical technology solutions.
-                </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
 
-                <div class="hero-buttons">
+                        <a href="./resume.pdf"
+                           target="_blank"
+                           download="Yagavan_TM_Resume.pdf"
+                           class="btn btn-secondary"
+                           id="resumeDownloadBtn">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
 
-                    <a href="#projects" class="btn primary-btn">
-                        View Projects
-                    </a>
+                    <div class="hero-social-links">
+                        <span class="social-label">Connect:</span>
+                        <a href="https://github.com/yagavan222008-dotcom"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="hero-social-chip">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
 
-                    <a href="https://github.com/yagavan222008-dotcom"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn secondary-btn">
-                        <i class="fa-brands fa-github"></i>
-                        GitHub
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn secondary-btn">
-                        <i class="fa-brands fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-
-                </div>
-
-                <a href="./resume.pdf"
-                   target="_blank"
-                   class="resume-link">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    View My Resume
-                </a>
-
-            </div>
-
-
-            <!-- CODE WINDOW -->
-
-            <div class="code-window">
-
-                <div class="window-top">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                        <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="hero-social-chip">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
 
                 </div>
 
-                <pre><code>
-<span class="code-purple">class</span> <span class="code-blue">Yagavan</span>:
+                <!-- HERO CODE CARD / DEVELOPER ILLUSTRATION -->
+                <div class="hero-visual">
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="window-controls">
+                                <span class="control-dot dot-red"></span>
+                                <span class="control-dot dot-yellow"></span>
+                                <span class="control-dot dot-green"></span>
+                            </div>
+                            <div class="window-tab">
+                                <i class="fa-brands fa-python"></i>
+                                <span>developer.py</span>
+                            </div>
+                            <span class="file-status">UTF-8</span>
+                        </div>
 
-    role = <span class="code-green">"AI & Data Science Student"</span>
+                        <div class="code-body">
+                            <pre><code><span class="syn-keyword">class</span> <span class="syn-class">AIStudentDeveloper</span>:
+    <span class="syn-keyword">def</span> <span class="syn-func">__init__</span>(<span class="syn-param">self</span>):
+        <span class="syn-param">self</span>.name = <span class="syn-string">"Yagavan T M"</span>
+        <span class="syn-param">self</span>.institution = <span class="syn-string">"KPRIET"</span>
+        <span class="syn-param">self</span>.degree = <span class="syn-string">"B.Tech AI &amp; Data Science"</span>
+        <span class="syn-param">self</span>.year = <span class="syn-string">"Second Year"</span>
+        <span class="syn-param">self</span>.focus = [
+            <span class="syn-string">"Intelligent Applications"</span>,
+            <span class="syn-string">"Backend Systems"</span>,
+            <span class="syn-string">"Machine Learning &amp; SQL"</span>
+        ]
+        <span class="syn-param">self</span>.seed_funded = <span class="syn-bool">True</span>  <span class="syn-comment"># NEXUS Project</span>
 
-    skills = [
-        <span class="code-green">"Python"</span>,
-        <span class="code-green">"SQL"</span>,
-        <span class="code-green">"Machine Learning"</span>,
-        <span class="code-green">"Data Science"</span>
-    ]
+    <span class="syn-keyword">def</span> <span class="syn-func">build_solution</span>(<span class="syn-param">self</span>, problem):
+        <span class="syn-keyword">return</span> f<span class="syn-string">"Engineering practical impact for {problem}"</span>
 
-    goal = <span class="code-green">"AI Engineer"</span>
-                </code></pre>
+<span class="syn-var">dev</span> = <span class="syn-class">AIStudentDeveloper</span>()
+<span class="syn-func">print</span>(<span class="syn-string">"Ready to create, learn &amp; collaborate."</span>)</code></pre>
+                        </div>
+
+                        <div class="code-footer">
+                            <div class="terminal-badge">
+                                <span class="status-indicator-dot"></span>
+                                <span>Python 3.12 · Active Environment</span>
+                            </div>
+                            <span class="terminal-location">Coimbatore, IN</span>
+                        </div>
+                    </div>
+
+                    <!-- Ambient Glow Effect -->
+                    <div class="hero-glow-blob"></div>
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= ABOUT ================= -->
-
+        <!-- ================= ABOUT SECTION ================= -->
         <section id="about" class="section">
 
-            <div class="section-heading">
-                <p>01</p>
-                <h2>About Me</h2>
+            <div class="section-header">
+                <span class="section-tag">01 // PROFILE</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
             </div>
 
-            <div class="about-content">
+            <div class="about-grid">
 
-                <div class="about-text">
-
-                    <p>
-                        I'm <strong>Yagavan T M</strong>, a second-year
-                        Artificial Intelligence and Data Science student at
-                        <strong>KPR Institute of Engineering and Technology</strong>.
+                <div class="about-narrative">
+                    <p class="about-lead">
+                        I am <strong>Yagavan T M</strong>, currently in my second year pursuing a degree in <strong>Artificial Intelligence and Data Science</strong> at <strong>KPR Institute of Engineering and Technology</strong>.
                     </p>
 
                     <p>
-                        I have experience with programming fundamentals,
-                        Python, SQL and data science concepts. I enjoy
-                        developing projects that combine software,
-                        data and artificial intelligence.
+                        My technical passion revolves around the intersection of <strong>data intelligence</strong> and <strong>software engineering</strong>. Rather than treating AI as merely an abstract concept, I concentrate on building robust systems that ingest real-world data, apply machine learning algorithms, and deliver reliable practical outcomes.
                     </p>
 
                     <p>
-                        My current goal is to continuously improve my
-                        technical skills and build real-world projects
-                        that demonstrate my ability to solve problems
-                        using technology.
+                        In addition to artificial intelligence and data science, I am deeply intrigued by <strong>backend development</strong>. Designing clean RESTful APIs, structuring performant database schemas, and building services that scale smoothly are essential elements of my engineering practice.
                     </p>
 
+                    <p>
+                        I take pride in transforming real challenges into working solutions — from conceptualizing campus intelligence architectures to developing interactive data analytics dashboards.
+                    </p>
+
+                    <div class="about-quick-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Institution:</span>
+                            <span class="spec-value">KPR Institute of Engg. &amp; Tech.</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Degree:</span>
+                            <span class="spec-value">Artificial Intelligence &amp; Data Science</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Academic Year:</span>
+                            <span class="spec-value">Second Year</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Core Philosophy:</span>
+                            <span class="spec-value">Practical, Applied Technology</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="about-card">
+                <div class="about-cards-container">
 
-                    <div class="about-item">
-                        <span>Education</span>
-                        <strong>B.Tech / B.E. AI &amp; DS</strong>
+                    <div class="about-card">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>AI &amp; Data Science</h3>
+                        <p>
+                            Focusing on statistical modeling, data analysis, and machine learning pipelines to extract actionable insights from data.
+                        </p>
                     </div>
 
-                    <div class="about-item">
-                        <span>Year</span>
-                        <strong>2nd Year</strong>
+                    <div class="about-card">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3>Backend Systems</h3>
+                        <p>
+                            Interested in building resilient APIs, managing SQL &amp; graph databases, and orchestrating solid backend architectures.
+                        </p>
                     </div>
 
-                    <div class="about-item">
-                        <span>Focus</span>
-                        <strong>AI &amp; Data Science</strong>
+                    <div class="about-card">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3>Funded Innovation</h3>
+                        <p>
+                            Recipient of institutional seed funding for the NEXUS campus intelligence system, validating real-world project viability.
+                        </p>
                     </div>
 
-                    <div class="about-item">
-                        <span>Goal</span>
-                        <strong>AI Engineer</strong>
+                    <div class="about-card">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3>Real-World Problem Solving</h3>
+                        <p>
+                            Committed to practical technology solutions that streamline operations, bolster security, and empower users.
+                        </p>
                     </div>
 
                 </div>
@@ -242,51 +345,210 @@
         </section>
 
 
-        <!-- ================= SKILLS ================= -->
-
+        <!-- ================= SKILLS SECTION ================= -->
         <section id="skills" class="section">
 
-            <div class="section-heading">
-                <p>02</p>
-                <h2>Skills</h2>
+            <div class="section-header">
+                <span class="section-tag">02 // CAPABILITIES</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
             </div>
 
-            <div class="skills-grid">
+            <p class="section-subtitle">
+                A structured overview of the programming languages, backend frameworks, databases, and data technologies I work with.
+            </p>
 
-                <div class="skill-card">
-                    <i class="fa-brands fa-python"></i>
-                    <h3>Python</h3>
-                    <p>Programming &amp; Data Science</p>
+            <div class="skills-categories-grid">
+
+                <!-- 1. Programming -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="cat-icon-wrap">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="category-title">Programming</h3>
+                            <span class="category-count">4 Languages</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags-wrap">
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-python"></i>
+                            <span>Python</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-c"></i>
+                            <span>C</span>
+                        </div>
+
+                        <div class="skill-pill skill-pill-highlight">
+                            <i class="fa-brands fa-java"></i>
+                            <span>Java</span>
+                            <span class="pill-badge">Learning</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>SQL</h3>
-                    <p>Database &amp; Querying</p>
+                <!-- 2. Backend Development -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="cat-icon-wrap">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div>
+                            <h3 class="category-title">Backend Development</h3>
+                            <span class="category-count">Architecture &amp; Services</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags-wrap">
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>FastAPI</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Data Science</h3>
-                    <p>Analysis &amp; Visualization</p>
+                <!-- 3. Frontend -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="cat-icon-wrap">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <div>
+                            <h3 class="category-title">Frontend</h3>
+                            <span class="category-count">Web Technologies</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags-wrap">
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-react"></i>
+                            <span>React</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Next.js</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-brain"></i>
-                    <h3>Artificial Intelligence</h3>
-                    <p>AI &amp; Machine Learning</p>
+                <!-- 4. Databases -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="cat-icon-wrap">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div>
+                            <h3 class="category-title">Databases</h3>
+                            <span class="category-count">Relational &amp; Graph</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags-wrap">
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-server"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-cloud"></i>
+                            <span>Supabase</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                            <span>Neo4j</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-table"></i>
-                    <h3>Pandas &amp; NumPy</h3>
-                    <p>Data Processing</p>
+                <!-- 5. Tools and Technologies -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="cat-icon-wrap">
+                            <i class="fa-solid fa-toolbox"></i>
+                        </div>
+                        <div>
+                            <h3 class="category-title">Tools &amp; Technologies</h3>
+                            <span class="category-count">Version Control &amp; DevOps</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags-wrap">
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-brands fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>C Programming</h3>
-                    <p>Programming Fundamentals</p>
+                <!-- 6. AI and Data Science -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="cat-icon-wrap">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 class="category-title">AI &amp; Data Science</h3>
+                            <span class="category-count">Intelligence &amp; Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-tags-wrap">
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span>Machine Learning</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Data Science</span>
+                        </div>
+
+                        <div class="skill-pill">
+                            <i class="fa-solid fa-robot"></i>
+                            <span>AI Applications</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -294,117 +556,371 @@
         </section>
 
 
-        <!-- ================= PROJECTS ================= -->
-
+        <!-- ================= PROJECTS SECTION ================= -->
         <section id="projects" class="section">
 
-            <div class="section-heading">
-                <p>03</p>
-                <h2>Projects</h2>
+            <div class="section-header">
+                <span class="section-tag">03 // PORTFOLIO</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-divider"></div>
             </div>
+
+            <p class="section-subtitle">
+                Highlighted technical projects spanning campus intelligence, business intelligence analytics, full-stack DSA simulation, and quantitative finance backtesting.
+            </p>
 
             <div class="projects-grid">
 
-                <div class="project-card">
-
-                    <div class="project-number">
-                        01
+                <!-- PROJECT 1: NEXUS -->
+                <article class="project-card project-card-featured">
+                    <div class="project-header">
+                        <div class="project-badge-group">
+                            <span class="project-badge badge-featured">
+                                <i class="fa-solid fa-star"></i> Seed Funded
+                            </span>
+                            <span class="project-badge badge-institution">
+                                KPRIET Approved
+                            </span>
+                        </div>
+                        <span class="project-number">01</span>
                     </div>
 
-                    <h3>AI &amp; Data Science Projects</h3>
-
-                    <p>
-                        A collection of projects focused on Python,
-                        data analysis, machine learning and artificial
-                        intelligence.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>AI</span>
-                        <span>Data Science</span>
+                    <div class="project-illustration illustration-nexus">
+                        <div class="illustration-art">
+                            <div class="nexus-pulse-ring"></div>
+                            <div class="nexus-core">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="nexus-nodes">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <a href="https://github.com/yagavan222008-dotcom"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="project-link">
-                        View on GitHub
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                    <div class="project-body">
+                        <h3 class="project-title">NEXUS – AI-Powered Campus Intelligence System</h3>
 
-                </div>
+                        <p class="project-desc">
+                            An AI-powered campus intelligence solution designed to improve campus operations and student experiences.
+                        </p>
 
+                        <div class="project-highlights-box">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>KPRIET-approved project</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Received institutional seed funding</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Intelligent campus management solution</span>
+                            </div>
+                        </div>
 
-                <div class="project-card">
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Campus Intelligence</span>
+                            <span class="tech-tag">Backend</span>
+                        </div>
 
-                    <div class="project-number">
-                        02
+                        <div class="project-actions">
+                            <span class="project-status-chip">
+                                <i class="fa-solid fa-seedling"></i> Institutional Seed Funded Project
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2: Sales & Revenue Dashboard -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge-group">
+                            <span class="project-badge badge-analytics">
+                                <i class="fa-solid fa-chart-pie"></i> Business Intelligence
+                            </span>
+                            <span class="project-badge badge-institution">
+                                Analytics
+                            </span>
+                        </div>
+                        <span class="project-number">02</span>
                     </div>
 
-                    <h3>Portfolio Website</h3>
-
-                    <p>
-                        A responsive personal portfolio website built
-                        using HTML, CSS and JavaScript and deployed
-                        using GitHub Pages.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                    <div class="project-illustration illustration-sales">
+                        <div class="illustration-art">
+                            <div class="chart-bars">
+                                <div class="bar bar-1"></div>
+                                <div class="bar bar-2"></div>
+                                <div class="bar bar-3"></div>
+                                <div class="bar bar-4"></div>
+                            </div>
+                            <div class="chart-line-trend"></div>
+                        </div>
                     </div>
 
-                    <a href="https://github.com/yagavan222008-dotcom/portfolio"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="project-link">
-                        View Repository
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                    <div class="project-body">
+                        <h3 class="project-title">Sales &amp; Revenue Dashboard</h3>
 
-                </div>
+                        <p class="project-desc">
+                            An interactive business intelligence dashboard for analyzing sales performance, revenue trends and business metrics.
+                        </p>
+
+                        <div class="project-highlights-box">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Interactive sales performance tracking</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Revenue trends and business metrics analysis</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Dynamic data visualization and KPIs</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Plotly</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/yagavan222008-dotcom"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-sm">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3: SMART ERM -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge-group">
+                            <span class="project-badge badge-dsa">
+                                <i class="fa-solid fa-hospital-user"></i> DSA Simulation
+                            </span>
+                            <span class="project-badge badge-featured">
+                                23/23 Tests Passed
+                            </span>
+                        </div>
+                        <span class="project-number">03</span>
+                    </div>
+
+                    <div class="project-illustration illustration-erm">
+                        <div class="illustration-art">
+                            <div class="erm-waveform">
+                                <div class="erm-ecg-icon">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div class="erm-queue-nodes">
+                                    <span class="erm-node p1">P1: Heap</span>
+                                    <span class="erm-node p2">P2: Queue</span>
+                                    <span class="erm-node p3">P3: Hash</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">SMART ERM – Smart Emergency Room Manager</h3>
+
+                        <p class="project-desc">
+                            A full-stack Emergency Department operations and patient scheduling application developed for university Data Structures and Algorithms coursework, faculty demonstrations and academic examinations.
+                        </p>
+
+                        <p class="project-disclaimer">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Educational emergency-room scheduling simulation; not a clinical diagnostic system.
+                        </p>
+
+                        <div class="project-highlights-box">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>23 automated unit and integration tests passed (0 failures)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Binary Min-Heap, Hash Table, Linked List, Queue, Merge Sort</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Triage priority queue, bed allocation &amp; interactive DSA lab</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">React 18</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <span class="project-status-chip">
+                                <i class="fa-solid fa-graduation-cap"></i> Academic Coursework Project
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 4: QUANTEXA -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge-group">
+                            <span class="project-badge badge-finance">
+                                <i class="fa-solid fa-chart-line"></i> Quantitative Finance
+                            </span>
+                            <span class="project-badge badge-analytics">
+                                Backtesting
+                            </span>
+                        </div>
+                        <span class="project-number">04</span>
+                    </div>
+
+                    <div class="project-illustration illustration-quantexa">
+                        <div class="illustration-art">
+                            <div class="quant-chart">
+                                <div class="quant-candlesticks">
+                                    <div class="candle green"></div>
+                                    <div class="candle red"></div>
+                                    <div class="candle green"></div>
+                                    <div class="candle purple"></div>
+                                </div>
+                                <div class="quant-metrics">
+                                    <span class="quant-metric-pill">SMA / EMA</span>
+                                    <span class="quant-metric-pill">Sharpe Ratio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">QUANTEXA – Quantitative Multi-Asset Financial Intelligence &amp; Backtesting Platform</h3>
+
+                        <p class="project-desc">
+                            A quantitative financial research platform concept designed to bring multi-asset market analysis, financial indicators, portfolio risk assessment and historical strategy backtesting into one application.
+                        </p>
+
+                        <p class="project-disclaimer">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Quantitative research and backtesting platform; does not constitute investment advice.
+                        </p>
+
+                        <div class="project-highlights-box">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Multi-asset market analysis (Gold, BTC, NVDA) with SMA/EMA</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Volatility, Sharpe ratio, max drawdown &amp; rolling correlations</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Strategy backtesting (SMA/EMA crossover, momentum) vs Buy &amp; Hold</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">yfinance</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/yagavan222008-dotcom/QUANTEXA"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-sm">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- ================= EDUCATION ================= -->
-
+        <!-- ================= EDUCATION SECTION ================= -->
         <section id="education" class="section">
 
-            <div class="section-heading">
-                <p>04</p>
-                <h2>Education</h2>
+            <div class="section-header">
+                <span class="section-tag">04 // ACADEMICS</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-divider"></div>
             </div>
 
-            <div class="education-card">
+            <p class="section-subtitle">
+                My academic foundation and educational milestones in Artificial Intelligence and Data Science.
+            </p>
 
-                <div class="education-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
+            <div class="education-timeline">
 
-                <div>
+                <div class="education-timeline-card">
 
-                    <span class="education-year">
-                        2025 — Present
-                    </span>
+                    <div class="edu-card-left">
+                        <div class="edu-icon-badge">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="edu-badge-year">Second Year</span>
+                        <span class="edu-timeline-date">2024 — Present</span>
+                    </div>
 
-                    <h3>
-                        Artificial Intelligence &amp; Data Science
-                    </h3>
+                    <div class="edu-card-right">
+                        <div class="edu-header-wrap">
+                            <div>
+                                <h3 class="edu-degree">Artificial Intelligence &amp; Data Science</h3>
+                                <h4 class="edu-institution">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    KPR Institute of Engineering and Technology
+                                </h4>
+                            </div>
+                            <span class="edu-location"><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu</span>
+                        </div>
 
-                    <h4>
-                        KPR Institute of Engineering and Technology
-                    </h4>
+                        <p class="edu-description">
+                            Currently pursuing my second year with deep immersion into computer science foundations, algorithm design, probabilistic reasoning, database architecture, and machine learning principles.
+                        </p>
 
-                    <p>
-                        Currently pursuing my second year with a focus
-                        on programming, artificial intelligence,
-                        data science and problem solving.
-                    </p>
+                        <div class="edu-highlights-grid">
+                            <div class="edu-highlight-box">
+                                <span class="highlight-label">Core Coursework</span>
+                                <div class="highlight-tags">
+                                    <span>Data Structures</span>
+                                    <span>Python Programming</span>
+                                    <span>SQL &amp; DBMS</span>
+                                    <span>Machine Learning</span>
+                                    <span>Object Oriented Programming</span>
+                                    <span>Applied Statistics</span>
+                                </div>
+                            </div>
+
+                            <div class="edu-highlight-box">
+                                <span class="highlight-label">Academic Achievement</span>
+                                <p class="highlight-text">
+                                    Recipient of <strong>Institutional Seed Funding</strong> for <em>NEXUS – AI-Powered Campus Intelligence System</em>, approved directly by KPRIET for student-driven technical innovation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -413,55 +929,138 @@
         </section>
 
 
-        <!-- ================= CONTACT ================= -->
-
+        <!-- ================= CONTACT SECTION ================= -->
         <section id="contact" class="section contact-section">
 
-            <div class="section-heading">
-                <p>05</p>
-                <h2>Let's Connect</h2>
+            <div class="section-header">
+                <span class="section-tag">05 // REACH OUT</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-divider"></div>
             </div>
 
-            <div class="contact-content">
+            <p class="section-subtitle">
+                Whether you're interested in discussing an internship, collaborating on an AI/ML project, or talking technology, feel free to get in touch.
+            </p>
 
-                <p>
-                    I'm always interested in learning, building projects
-                    and connecting with people in technology.
-                </p>
+            <div class="contact-grid">
 
-                <div class="contact-buttons">
+                <div class="contact-channels">
 
-                    <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-btn">
+                    <!-- Email Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">Email Address</span>
+                            <a href="mailto:yagavan222008@gmail.com" class="channel-value" id="emailLink">
+                                yagavan222008@gmail.com
+                            </a>
+                        </div>
+                        <div class="channel-action">
+                            <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address" title="Copy email address">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="copy-tooltip" id="copyTooltip">Copy</span>
+                            </button>
+                            <a href="mailto:yagavan222008@gmail.com" class="channel-link-btn" aria-label="Send email">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
 
-                        <i class="fa-brands fa-linkedin"></i>
-                        LinkedIn
+                    <!-- LinkedIn Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon-wrap">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="channel-value">
+                                linkedin.com/in/yagavan-t-m-4a3540374
+                            </a>
+                        </div>
+                        <div class="channel-action">
+                            <a href="https://www.linkedin.com/in/yagavan-t-m-4a3540374/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="channel-link-btn"
+                               aria-label="Open LinkedIn profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
 
-                    </a>
+                    <!-- GitHub Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon-wrap">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">GitHub</span>
+                            <a href="https://github.com/yagavan222008-dotcom"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="channel-value">
+                                github.com/yagavan222008-dotcom
+                            </a>
+                        </div>
+                        <div class="channel-action">
+                            <a href="https://github.com/yagavan222008-dotcom"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="channel-link-btn"
+                               aria-label="Open GitHub profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
 
+                    <!-- Resume Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon-wrap">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">Curriculum Vitae</span>
+                            <span class="channel-value">resume.pdf</span>
+                        </div>
+                        <div class="channel-action">
+                            <a href="./resume.pdf"
+                               target="_blank"
+                               download="Yagavan_TM_Resume.pdf"
+                               class="channel-link-btn"
+                               aria-label="Download resume">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/yagavan222008-dotcom"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-btn">
+                </div>
 
-                        <i class="fa-brands fa-github"></i>
-                        GitHub
+                <!-- Direct Message Box / Mobile QR Showcase -->
+                <div class="contact-card-extra">
+                    <div class="qr-showcase-box">
+                        <div class="qr-image-container">
+                            <img src="./yagavans portfolio.png" alt="Scan to view Yagavan's portfolio on mobile" class="portfolio-qr-img">
+                        </div>
+                        <div class="qr-text-container">
+                            <h4>Scan on Mobile</h4>
+                            <p>Quickly access this portfolio, resume, and contact links directly from your mobile device.</p>
+                            <span class="qr-chip"><i class="fa-solid fa-qrcode"></i> Instant Mobile Access</span>
+                        </div>
+                    </div>
 
-                    </a>
-
-
-                    <a href="./resume.pdf"
-                       target="_blank"
-                       class="contact-btn">
-
-                        <i class="fa-solid fa-file-pdf"></i>
-                        Resume
-
-                    </a>
-
+                    <div class="direct-message-cta">
+                        <h4>Looking for an AI / Backend Intern?</h4>
+                        <p>I am eager to contribute to forward-thinking engineering teams and solve real problems with Python, SQL, and AI.</p>
+                        <a href="mailto:yagavan222008@gmail.com?subject=Opportunity%20/%20Connecting%20with%20Yagavan" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Direct Email</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -470,20 +1069,25 @@
 
 
         <!-- ================= FOOTER ================= -->
-
-        <footer>
-
-            <p>
-                © 2026 Yagavan T M. Built with HTML, CSS &amp; JavaScript.
-            </p>
-
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">YAGAVAN<span class="accent-dot">.</span></span>
+                    <p class="footer-copy">© 2026 Yagavan T M. Crafted with modern HTML, CSS &amp; JavaScript.</p>
+                </div>
+                <div class="footer-right">
+                    <span class="footer-host"><i class="fa-brands fa-github"></i> Hosted on GitHub Pages</span>
+                    <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                </div>
+            </div>
         </footer>
 
     </main>
 
-
-    <!-- JavaScript -->
-
+    <!-- JavaScript File -->
     <script src="./script.js"></script>
 
 </body>
