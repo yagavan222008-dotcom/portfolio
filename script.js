@@ -1,6 +1,7 @@
 /**
  * YAGAVAN T M - DEVELOPER PORTFOLIO
- * Vanilla JavaScript: Navigation, ScrollSpy, Mobile Drawer, Clipboard & Interactions
+ * Modern Vanilla JavaScript: Responsive Navigation Drawer, ScrollSpy,
+ * Scroll Offset Management, Clipboard API & Accessibility Controls
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,32 +21,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyTooltip = document.getElementById('copyTooltip');
 
     /* ==========================================================================
-       2. MOBILE DRAWER NAVIGATION
+       2. MOBILE DRAWER NAVIGATION & SCROLL LOCK
        ========================================================================== */
     function openMobileMenu() {
         if (!sidebar) return;
         sidebar.classList.add('mobile-active');
-        if (sidebarOverlay) sidebarOverlay.classList.add('active');
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.add('active');
+            sidebarOverlay.setAttribute('aria-hidden', 'false');
+        }
         if (hamburgerBtn) {
             hamburgerBtn.classList.add('active');
             hamburgerBtn.setAttribute('aria-expanded', 'true');
         }
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('nav-open');
+        document.documentElement.classList.add('nav-open');
     }
 
     function closeMobileMenu() {
         if (!sidebar) return;
         sidebar.classList.remove('mobile-active');
-        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('active');
+            sidebarOverlay.setAttribute('aria-hidden', 'true');
+        }
         if (hamburgerBtn) {
             hamburgerBtn.classList.remove('active');
             hamburgerBtn.setAttribute('aria-expanded', 'false');
         }
-        document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
+        document.documentElement.classList.remove('nav-open');
     }
 
     if (hamburgerBtn) {
-        hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             const isOpen = sidebar && sidebar.classList.contains('mobile-active');
             if (isOpen) {
                 closeMobileMenu();
@@ -56,7 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (mobileCloseBtn) {
-        mobileCloseBtn.addEventListener('click', closeMobileMenu);
+        mobileCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
     }
 
     if (sidebarOverlay) {
@@ -71,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       3. SMOOTH SCROLLING WITH OFFSET
+       3. SMOOTH SCROLLING WITH PRECISE HEADER OFFSET
        ========================================================================== */
     const internalLinks = document.querySelectorAll('a[href^="#"]');
 
@@ -84,27 +97,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetSection) {
                 e.preventDefault();
 
-                // Close mobile menu if open
+                // Close mobile menu immediately upon selecting a link
                 closeMobileMenu();
 
+                // Calculate offset: on <=1024px mobile header is 60px + breathing room
                 const isMobile = window.innerWidth <= 1024;
-                const headerOffset = isMobile ? 70 : 0;
+                const headerOffset = isMobile ? 68 : 20;
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
                 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: Math.max(0, offsetPosition),
                     behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
 
-                // Update active nav state immediately
+                // Update active state in navigation
                 updateActiveLink(targetId.substring(1));
 
-                // Update URL hash safely without triggering abrupt browser jump
-                if (history.pushState) {
-                    history.pushState(null, null, targetId);
+                // Safe hash push without jumping
+                if (window.history && window.history.pushState) {
+                    window.history.pushState(null, null, targetId);
                 }
             }
         });
@@ -124,11 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Modern IntersectionObserver for performant scrollspy
     if ('IntersectionObserver' in window && sections.length > 0) {
         const observerOptions = {
             root: null,
-            rootMargin: '-20% 0px -60% 0px',
+            rootMargin: '-25% 0px -55% 0px',
             threshold: 0
         };
 
@@ -148,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fallback for older browsers
         window.addEventListener('scroll', () => {
             let current = '';
-            const scrollPos = window.scrollY + 200;
+            const scrollPos = window.scrollY + 180;
 
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
@@ -165,19 +178,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       5. COPY EMAIL TO CLIPBOARD
+       5. COPY EMAIL TO CLIPBOARD WITH FEEDBACK
        ========================================================================== */
     if (copyEmailBtn) {
-        const emailToCopy = 'yagavan222008@gmail.com';
+        const emailAddress = 'yagavan222008@gmail.com';
 
         copyEmailBtn.addEventListener('click', async () => {
             try {
                 if (navigator.clipboard && navigator.clipboard.writeText) {
-                    await navigator.clipboard.writeText(emailToCopy);
+                    await navigator.clipboard.writeText(emailAddress);
                 } else {
-                    // Fallback for older environments
                     const textarea = document.createElement('textarea');
-                    textarea.value = emailToCopy;
+                    textarea.value = emailAddress;
                     textarea.style.position = 'fixed';
                     textarea.style.opacity = '0';
                     document.body.appendChild(textarea);
@@ -186,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.removeChild(textarea);
                 }
 
-                // Show visual feedback in tooltip
                 copyEmailBtn.classList.add('copied');
                 if (copyTooltip) copyTooltip.textContent = 'Copied!';
 
@@ -195,8 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (copyTooltip) copyTooltip.textContent = 'Copy';
                 }, 2200);
             } catch (err) {
-                console.warn('Clipboard write failed:', err);
-                if (copyTooltip) copyTooltip.textContent = 'Error';
+                console.warn('Clipboard write fallback triggered:', err);
+                if (copyTooltip) copyTooltip.textContent = 'Copy failed';
                 setTimeout(() => {
                     if (copyTooltip) copyTooltip.textContent = 'Copy';
                 }, 2000);
@@ -218,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       7. WINDOW RESIZE HANDLER (Desktop / Mobile transition cleanup)
+       7. WINDOW RESIZE HANDLER (Desktop / Mobile Drawer Cleanup)
        ========================================================================== */
     window.addEventListener('resize', () => {
         if (window.innerWidth > 1024) {
